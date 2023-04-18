@@ -7,11 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UiController {
     @Autowired
     StudentService studentService;
+
+    @Autowired
+    CourseService courseService;
 
     @GetMapping({"/", "/login"})
     public String login(Model model){
@@ -37,9 +41,16 @@ public class UiController {
 
 
 
+//    @GetMapping("/enrollments")
+//    public String enrollmentsPage(){
+//        return "enrollments";
+//    }
+
     @GetMapping("/enrollments")
-    public String enrollmentsPage(){
-        return "enrollments";
+    public ModelAndView  enrollmentsPage(){
+        ModelAndView mav = new ModelAndView("courses");
+        mav.addObject("courses", courseService.getCourse());
+        return mav;
     }
 
     @GetMapping({ "/register"})

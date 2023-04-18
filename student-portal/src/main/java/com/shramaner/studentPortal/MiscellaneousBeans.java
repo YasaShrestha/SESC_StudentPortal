@@ -45,13 +45,13 @@ class MiscellaneousBeans {
         return sessionLocaleResolver;
     }
 
-    @Bean
-    CommandLineRunner initDatabase(ICourseDAO iCourseDAO) {
+ //   @Bean
+ //   CommandLineRunner initDatabase(ICourseDAO iCourseDAO) {
 //        return args -> {
 //
 //           iCourseDAO.save(new Course(12l, "C12", "Project Management", 170));
 //            iCourseDAO.save(new Course(13l, "C13", "History", 155));
-//            iCourseDAO.save(new Course(14l, "C14", "Hospitality managment", 142));
+//            iCourseDAO.save(new Course(14l, "C14", "Hospitality Management", 142));
 //            iCourseDAO.save(new Course(15l, "C15", "Computer Science", 125));
 //            iCourseDAO.save(new Course(16l, "C16", "Finance Management", 110));
 //            iCourseDAO.save(new Course(17l, "C17", "Data Science", 152));
@@ -64,5 +64,5 @@ class MiscellaneousBeans {
 //
 //
 //        };
-    }
+//    }
 }

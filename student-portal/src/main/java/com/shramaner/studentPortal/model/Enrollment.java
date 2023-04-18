@@ -17,6 +17,6 @@ public class Enrollment {
     @Column(nullable = false)
     private Long studentId;
     @Column(nullable = false)
-    private  String courseId;
+    private  Long courseId;
 
 }
