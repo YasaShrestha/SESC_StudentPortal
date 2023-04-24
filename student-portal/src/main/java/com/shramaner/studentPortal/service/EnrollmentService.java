@@ -14,11 +14,12 @@ public class EnrollmentService {
     @Autowired
     IEnrollmentDAO iEnrollmentDAO;
 
-    public List<Enrollment> getEnrollment() {
-        List<Enrollment> enrollmentList = iEnrollmentDAO.findAll();
+    public List<Enrollment> getEnrollment(Long studentId) {
+        List<Enrollment> enrollmentList = iEnrollmentDAO.findByStudentId(studentId);
         return enrollmentList;
     }
     public void saveEnrollment(Enrollment enrollment) {
         iEnrollmentDAO.save(enrollment);
     }
+
 }

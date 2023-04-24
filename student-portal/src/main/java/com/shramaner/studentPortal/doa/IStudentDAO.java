@@ -11,4 +11,5 @@ public interface IStudentDAO extends JpaRepository<Student, Long> {
     public Student findByUserName(String name);
     public Student findByEmail(String email);
 
+    Student findByStudentId(long studentId);
 }

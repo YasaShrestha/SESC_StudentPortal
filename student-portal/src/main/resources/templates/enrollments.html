@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Student Courses</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -165,21 +165,18 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>Course Code</th>
-                                    <th>Course Name</th>
-                                    <th>Course Fee</th>
-                                    <th>Enroll</th>
+                                    <th>Course Id</th>
+                                    <th>Student Id</th>
 
                                 </tr>
                                 </thead>
 
                                 <tbody>
 
-                                <tr th:each="course: ${courses}">
-                                    <td th:text="${course.courseCode}" />
-                                    <td th:text="${course.courseName}" />
-                                    <td th:text="${course.courseFee}" />
-                                    <td >Click here</td>
+                                <tr th:each="enrol: ${enrollment}">
+                                    <td th:text="${enrol.courseId}" />
+                                    <td th:text="${enrol.studentId}" />
+
                                 </tr>
 
                                 </tbody>

@@ -162,37 +162,8 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <form th:action="@{/profile}" method="post" th:object="${student}">
-                <div class="form-group row">
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="fullName"
-                           placeholder="Full Name" th:field="*{fullName}">
-                  </div>
-
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="UserName"
-                           placeholder="User Name" th:field="*{userName}">
-                  </div>
-
-
-                  <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                           placeholder="Email Address" th:field="*{email}">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control form-control-user" id="password"
-                           placeholder="Password" th:field="*{password}">
-                  </div>
-                  <div class="form-group">
-                    <input type="number" class="form-control form-control-user" id="age"
-                           placeholder="Age" th:field="*{age}">
-                  </div>
-                  <input type="text" class="form-control form-control-user" id="studentId" disabled
-                         placeholder="Age" th:field="*{studentId}">
-                  <input class="btn btn-primary btn-user btn-block" type="submit" value="Update Account" />
-
-
-              </form>
+              welcome graduation page
+              <span th:if = "${graduation} == true"> Completed</span>
 
             </div>
           </div>
