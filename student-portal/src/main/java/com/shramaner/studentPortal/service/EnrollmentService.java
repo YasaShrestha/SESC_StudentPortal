@@ -5,9 +5,12 @@ import com.shramaner.studentPortal.doa.IEnrollmentDAO;
 import com.shramaner.studentPortal.model.Course;
 import com.shramaner.studentPortal.model.Enrollment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class EnrollmentService {
@@ -20,6 +23,8 @@ public class EnrollmentService {
     }
     public void saveEnrollment(Enrollment enrollment) {
         iEnrollmentDAO.save(enrollment);
+
+       //work on enrollment payment part
     }
 
 }

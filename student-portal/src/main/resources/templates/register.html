@@ -38,30 +38,34 @@
                             </div>
                             <form th:action="@{/register}" method="post" th:object="${student}">
                                <div class="form-group row">
-                                    <div class="form-group">
+                                   <label class="nav-item">Full Name</label>
+
                                         <input type="text" class="form-control form-control-user" id="fullName"
-                                               placeholder="Full Name" th:field="*{fullName}">
-                                    </div>
+                                               placeholder="Type your full name" th:field="*{fullName}">
+                                   <label class="nav-item">User Name</label>
 
-                                    <div class="form-group">
+
+
                                         <input type="text" class="form-control form-control-user" id="UserName"
-                                               placeholder="User Name" th:field="*{userName}">
-                                    </div>
+                                               placeholder="Type your username" th:field="*{username}">
 
 
-                                <div class="form-group">
+
+                                   <label class="nav-item">Email</label>
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address" th:field="*{email}">
-                                </div>
-                                <div class="form-group">
+                                        placeholder="Your Email Address" th:field="*{email}">
+
+                                   <label class="nav-item">Password</label>
                                     <input type="password" class="form-control form-control-user" id="password"
-                                           placeholder="Password" th:field="*{password}">
-                                </div>
-                                        <div class="form-group">
+                                           placeholder="Your Password" th:field="*{password}">
+
+                                   <label class="nav-item">Age</label>
                                             <input type="number" class="form-control form-control-user" id="age"
                                                    placeholder="Age" th:field="*{age}">
-                                        </div>
-
+                                   <label class="nav-item">Phone</label>
+                                   <input type="number" class="form-control form-control-user" id="phone"
+                                          placeholder="Phone number" th:field="*{phone}">
+                                   <label class="nav-item">&nbsp;</label>
                                    <input class="btn btn-primary btn-user btn-block" type="submit" value="Create Account" />
 
 

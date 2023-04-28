@@ -21,11 +21,14 @@ public class Student {
     @Column(nullable = false)
     private String password;
     @Column(nullable = false, unique = true)
-    private String userName;
+    private String username;
     @Column(nullable = false, unique = true)
     private  String email;
     @Column(nullable = false)
     private Integer age;
+    @Column(nullable = false, unique = true)
+    private Integer phone;
+
 
 
 }

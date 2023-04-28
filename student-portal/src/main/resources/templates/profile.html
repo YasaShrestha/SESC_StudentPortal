@@ -34,9 +34,9 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/profile">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
       <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+        <i class=""></i>
       </div>
       <div class="sidebar-brand-text mx-3">Student Portal</div>
     </a>
@@ -46,8 +46,8 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+      <a class="nav-link" href="/profile">
+        <i class=""></i>
         <span>Student Profile</span></a>
     </li>
 
@@ -57,9 +57,9 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link" href=""
+      <a class="nav-link" href="/enrollments"
          aria-expanded="true" >
-        <i class="fas fa-fw fa-cog"></i>
+        <i class=""></i>
         <span>Enrollments</span>
       </a>
 
@@ -71,24 +71,24 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link" href=""
+      <a class="nav-link" href="/graduation"
          aria-expanded="true">
-        <i class="fas fa-fw fa-folder"></i>
+        <i class=""></i>
         <span>Graduation</span>
       </a>
 
     </li>
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-      <a class="nav-link" href="">
-        <i class="fas fa-fw fa-table"></i>
+      <a class="nav-link" href="/courses">
+        <i class=""></i>
         <span>Courses</span></a>
     </li>
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-      <a class="nav-link" href="">
-        <i class="fas fa-fw fa-chart-area"></i>
+      <a class="nav-link" href="/login">
+        <i class=""></i>
         <span>Sign Out</span></a>
     </li>
 
@@ -158,37 +158,42 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
           <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Leedsbeckett Courses</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Student Profile</h6>
           </div>
           <div class="card-body">
-            <div class="table-responsive">
+
               <form th:action="@{/profile}" method="post" th:object="${student}">
-                <div class="form-group row">
-                  <div class="form-group">
+
+                    <label class="nav-item">Full Name</label>
                     <input type="text" class="form-control form-control-user" id="fullName"
                            placeholder="Full Name" th:field="*{fullName}">
-                  </div>
 
-                  <div class="form-group">
+                    <label class="nav-item">User Name</label>
                     <input type="text" class="form-control form-control-user" id="UserName"
-                           placeholder="User Name" th:field="*{userName}">
-                  </div>
+                           placeholder="User Name" th:field="*{username}">
 
 
-                  <div class="form-group">
+
+
+                    <label class="nav-item">Email</label>
                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
                            placeholder="Email Address" th:field="*{email}">
-                  </div>
-                  <div class="form-group">
+
+                    <label class="nav-item">Password</label>
                     <input type="password" class="form-control form-control-user" id="password"
                            placeholder="Password" th:field="*{password}">
-                  </div>
-                  <div class="form-group">
+
+                    <label class="nav-item">Age</label>
                     <input type="number" class="form-control form-control-user" id="age"
                            placeholder="Age" th:field="*{age}">
-                  </div>
+                <label class="nav-item">Phone</label>
+                <input type="number" class="form-control form-control-user" id="phone"
+                       placeholder="Age" th:field="*{phone}">
+
+                  <label class="nav-item">Student ID</label>
                   <input type="text" class="form-control form-control-user" id="studentId" disabled
                          placeholder="Age" th:field="*{studentId}">
+                <label class="nav-item">&nbsp;</label>
                   <input class="btn btn-primary btn-user btn-block" type="submit" value="Update Account" />
 
 
