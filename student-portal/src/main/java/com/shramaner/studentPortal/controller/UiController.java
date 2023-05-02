@@ -1,5 +1,6 @@
 package com.shramaner.studentPortal.controller;
 
+import com.shramaner.studentPortal.model.Course;
 import com.shramaner.studentPortal.model.Enrollment;
 import com.shramaner.studentPortal.model.Student;
 import com.shramaner.studentPortal.service.CourseService;
@@ -116,7 +117,10 @@ public class UiController {
         User userDetails = (User) authentication.getPrincipal();
         long studentId = Long.valueOf(userDetails.getUsername());
         enrollment.setStudentId(studentId);
-        enrollmentService.saveEnrollment(enrollment);
+
+        Course course = courseService.getCourseById(courseid);
+
+        enrollmentService.saveEnrollment(enrollment, course.getCourseFee());
         return "redirect:/enrollments";
     }
 

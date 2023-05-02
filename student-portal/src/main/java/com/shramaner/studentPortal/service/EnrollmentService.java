@@ -7,6 +7,7 @@ import com.shramaner.studentPortal.model.Enrollment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,10 +22,25 @@ public class EnrollmentService {
         List<Enrollment> enrollmentList = iEnrollmentDAO.findByStudentId(studentId);
         return enrollmentList;
     }
-    public void saveEnrollment(Enrollment enrollment) {
+    public void saveEnrollment(Enrollment enrollment, float cfee) {
         iEnrollmentDAO.save(enrollment);
 
-       //work on enrollment payment part
+        RestTemplate restTemplate = new RestTemplate();
+
+        //create library account
+        String createInvoice = "http://localhost:8081/invoices";
+        Map createInvoiceMap= new HashMap();
+        createInvoiceMap.put("amount", cfee+"");
+        createInvoiceMap.put("type", "TUITION_FEES");
+        createInvoiceMap.put("dueDate", "2024-01-24");
+
+        Map createInvoiceStudentMap= new HashMap();
+        createInvoiceStudentMap.put("studentId", enrollment.getStudentId());
+
+        createInvoiceMap.put("account", createInvoiceStudentMap);
+
+        ResponseEntity<String> createLibraryAccountResponse = restTemplate.postForEntity(createInvoice,createInvoiceMap, String.class);
+
     }
 
 }

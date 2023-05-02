@@ -52,24 +52,27 @@ class MiscellaneousBeans {
         return new BCryptPasswordEncoder();
     }
 
- //   @Bean
- //   CommandLineRunner initDatabase(ICourseDAO iCourseDAO) {
-//        return args -> {
-//
-//           iCourseDAO.save(new Course(12l, "C12", "Project Management", 170));
-//            iCourseDAO.save(new Course(13l, "C13", "History", 155));
-//            iCourseDAO.save(new Course(14l, "C14", "Hospitality Management", 142));
-//            iCourseDAO.save(new Course(15l, "C15", "Computer Science", 125));
-//            iCourseDAO.save(new Course(16l, "C16", "Finance Management", 110));
-//            iCourseDAO.save(new Course(17l, "C17", "Data Science", 152));
-//            iCourseDAO.save(new Course(18l, "C18", "Cyber Security", 200));
-//            iCourseDAO.save(new Course(19l, "C19", "Logic Programming", 150));
-//            iCourseDAO.save(new Course(20l, "C20", "Software and Systems", 100));
-//            iCourseDAO.save(new Course(21l, "C21", "Managing Information in Digital Environment", 12));
-//            iCourseDAO.save(new Course(22l, "C22", "Research Method", 120));
-//
-//
-//
-//        };
-//    }
+  /*  @Bean
+    CommandLineRunner initDatabase(ICourseDAO iCourseDAO) {
+       return args -> {
+
+           iCourseDAO.save(new Course(12l, "C12", "Project Management", 170));
+            iCourseDAO.save(new Course(13l, "C13", "History", 155));
+            iCourseDAO.save(new Course(14l, "C14", "Hospitality Management", 142));
+          iCourseDAO.save(new Course(15l, "C15", "Computer Science", 125));
+           iCourseDAO.save(new Course(16l, "C16", "Finance Management", 110));
+          iCourseDAO.save(new Course(17l, "C17", "Data Science", 152));
+           iCourseDAO.save(new Course(18l, "C18", "Cyber Security", 200));
+            iCourseDAO.save(new Course(19l, "C19", "Logic Programming", 150));
+          iCourseDAO.save(new Course(20l, "C20", "Software and Systems", 100));
+          iCourseDAO.save(new Course(21l, "C21", "Managing Information in Digital Environment", 12));
+            iCourseDAO.save(new Course(22l, "C22", "Research Method", 120));
+           iCourseDAO.save(new Course(22l, "C23", "Human Interface", 90));
+
+
+
+        };
+    }
+
+   */
 }

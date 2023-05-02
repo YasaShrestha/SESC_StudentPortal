@@ -20,4 +20,8 @@ public class CourseService {
         List<Course> courseList = iCourseDAO.findByCourseName(name);
         return courseList;
     }
+
+    public Course getCourseById(String courseid) {
+        return iCourseDAO.findById(Long.valueOf(courseid)).get();
+    }
 }

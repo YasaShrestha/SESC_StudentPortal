@@ -32,8 +32,8 @@ public class StudentService {
     }
     public void createStudent (Student student){
         Random rd = new Random();
-        int num = rd.nextInt(9000000) + 1000000;
-        student.setStudentId((long)num);
+        long num = rd.nextInt(5000000) + 1000000;
+        student.setStudentId(num);
         student.setPassword(passwordEncoder.encode(student.getPassword()));
         iStudentDAO.save(student);
 
