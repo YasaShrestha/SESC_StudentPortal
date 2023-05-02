@@ -29,7 +29,7 @@ public class WebSecurityConfig {
 		http.authorizeRequests()
 				.requestMatchers("/anonymous*")
 				.anonymous()
-				.requestMatchers("/login","/register")
+				.requestMatchers("/login","/register","/css/**","/img/**","/js/**","/scss/**","/vendor/**")
 				.permitAll()
 				.anyRequest()
 				.authenticated()
@@ -55,31 +55,6 @@ public class WebSecurityConfig {
 	@Bean
 	public AuthenticationSuccessHandler myAuthenticationSuccessHandler(){
 		return new MySimpleUrlAuthenticationSuccessHandler();
-	}
-	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
-		http
-
-				.authorizeRequests()
-				.requestMatchers("/login", "/register","/css/**", "/img/**","js/**","scss/**","vendor/**").permitAll().and()
-
-
-				.authorizeRequests()
-				.anyRequest().authenticated()
-				.and()
-
-				.formLogin()
-				.loginPage("/login")
-				.failureUrl("/login?error")
-				.successForwardUrl("/courses")
-
-				.and()
-				.logout()
-				.logoutSuccessUrl("/login");
-
-
-		return http.build();
 	}
 
 }

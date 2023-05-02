@@ -47,7 +47,7 @@ public class UiController {
     @Resource(name="authenticationManager")
     private AuthenticationManager authManager;
 
-    @PostMapping("/login")
+    @PostMapping(value = {"/login", "/"})
     public String loginProcess(@ModelAttribute Student student, HttpServletRequest request){
         String email = student.getEmail();
         String password = student.getPassword();

@@ -158,12 +158,13 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
           <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Graduation Eligibility</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Welcome To Graduation Page</h6>
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              welcome graduation page
-              <span th:if = "${graduation} == true"> Completed</span>
+
+              <span th:if = "${graduation} == true"> You have successfully Completed your graduation.</span>
+              <span th:if = "${graduation} == false"> You have not Completed your graduation.</span>
 
             </div>
           </div>
