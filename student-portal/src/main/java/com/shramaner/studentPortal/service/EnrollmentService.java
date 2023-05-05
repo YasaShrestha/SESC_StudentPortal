@@ -39,7 +39,7 @@ public class EnrollmentService {
 
         createInvoiceMap.put("account", createInvoiceStudentMap);
 
-        ResponseEntity<String> createLibraryAccountResponse = restTemplate.postForEntity(createInvoice,createInvoiceMap, String.class);
+       restTemplate.postForEntity(createInvoice,createInvoiceMap, String.class);
 
     }
 

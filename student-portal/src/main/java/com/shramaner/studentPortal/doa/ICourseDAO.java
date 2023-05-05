@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ICourseDAO extends JpaRepository<Course, Long> {
 
-    public List<Course> findByCourseName(String name);
+    List<Course> findByCourseName(String name);
 
 
 
