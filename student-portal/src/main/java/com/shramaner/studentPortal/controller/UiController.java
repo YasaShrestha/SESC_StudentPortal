@@ -25,6 +25,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.RequestContext;
 
+import java.util.List;
+
 @Controller
 public class UiController {
     @Autowired
@@ -106,7 +108,15 @@ public class UiController {
         ModelAndView mav = new ModelAndView("enrollments");
         User userDetails = (User) authentication.getPrincipal();
         long studentId = Long.valueOf(userDetails.getUsername());
-        mav.addObject("enrollment", enrollmentService.getEnrollment(studentId));
+
+        List<Enrollment> enrollmentList = enrollmentService.getEnrollment(studentId);
+        for(Enrollment enrollment:enrollmentList){
+            long courseId = enrollment.getCourseId();
+
+            Course course = courseService.getCourseById(String.valueOf(courseId));
+            enrollment.setCourseName(course.getCourseName() + "-" +course.getCourseCode());
+        }
+        mav.addObject("enrollment", enrollmentList);
         return mav;
     }
 

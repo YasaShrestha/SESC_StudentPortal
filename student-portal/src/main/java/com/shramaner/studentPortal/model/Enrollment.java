@@ -19,4 +19,7 @@ public class Enrollment {
     @Column(nullable = false)
     private  Long courseId;
 
+    @Transient //To hold the data temporarily.
+    private String courseName;
+
 }
