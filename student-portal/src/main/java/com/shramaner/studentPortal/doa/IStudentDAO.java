@@ -1,6 +1,5 @@
 package com.shramaner.studentPortal.doa;
 
-import com.shramaner.studentPortal.model.Course;
 import com.shramaner.studentPortal.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 

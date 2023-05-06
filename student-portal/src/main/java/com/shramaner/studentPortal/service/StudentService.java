@@ -1,7 +1,6 @@
 package com.shramaner.studentPortal.service;
 
 import com.shramaner.studentPortal.doa.IStudentDAO;
-import com.shramaner.studentPortal.model.Course;
 import com.shramaner.studentPortal.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,7 +38,7 @@ public class StudentService {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        //create finance account
+        //create finance account for the student
         String createFinanceAccount = "http://localhost:8081/accounts";
         Map createFinanceAccountMap= new HashMap();
         createFinanceAccountMap.put("studentId", student.getStudentId());

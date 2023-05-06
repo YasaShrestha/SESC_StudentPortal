@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@RestController//Rest API Controller for student
 @RequestMapping("/api")
 public class StudentController {
     @Autowired
