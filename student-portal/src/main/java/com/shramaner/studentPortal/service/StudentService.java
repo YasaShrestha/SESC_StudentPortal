@@ -44,7 +44,7 @@ public class StudentService {
         createFinanceAccountMap.put("studentId", student.getStudentId());
         ResponseEntity<String> createFinanceAccountResponse = restTemplate.postForEntity(createFinanceAccount,createFinanceAccountMap, String.class);
 
-        //create library account
+        //create library account for the student
         String createLibraryAccount = "http://localhost/api/register";
         Map createLibraryAccountMap= new HashMap();
         createLibraryAccountMap.put("studentId", student.getStudentId());
