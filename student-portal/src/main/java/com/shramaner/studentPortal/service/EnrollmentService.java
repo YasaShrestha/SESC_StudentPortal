@@ -27,7 +27,7 @@ public class EnrollmentService {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        //create library account for the student
+       //Creating invoice in the finance 
         String createInvoice = "http://localhost:8081/invoices";
         Map createInvoiceMap= new HashMap();
         createInvoiceMap.put("amount", cfee+"");

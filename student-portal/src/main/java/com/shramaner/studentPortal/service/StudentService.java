@@ -53,10 +53,7 @@ public class StudentService {
     public void updateStudent (Student student){
         Student studentDb = iStudentDAO.findByStudentId(student.getStudentId());
         studentDb.setFullName(student.getFullName());
-        studentDb.setPassword(passwordEncoder.encode(student.getPassword()));
-        studentDb.setAge(student.getAge());
         studentDb.setUsername(student.getUsername());
-        studentDb.setPhone(student.getPhone());
         iStudentDAO.save(studentDb);
     }
 
